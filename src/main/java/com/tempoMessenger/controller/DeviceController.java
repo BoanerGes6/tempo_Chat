@@ -44,7 +44,7 @@ public class DeviceController {
 		long now = System.currentTimeMillis();
 		
 		return devices.values().stream()
-		.filter(d -> now - d.getLastseen() < 2000)
+		.filter(d -> now - d.getLastseen() < 15000)
 		.collect(Collectors.toList());
 	}
 	
